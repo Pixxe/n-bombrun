@@ -1,0 +1,31 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Regions</li>
+  </ol>
+</nav>
+<h1 class="text-center ">Liste des regions de France</h1>
+
+<table class="table table-striped ">
+<thead>
+<tr>
+  <th>Nom</th>
+  <th>Code</th>
+</tr>
+</thead>
+  <tbody>
+  <ng-container *ngFor="let region of myRegions" >
+  <tr routerLink="/region/{{region.code}}/departement">
+    <th>{{region.nom}}</th>
+    <th>{{region.code}}</th>
+  </tr>
+
+
+  </ng-container>
+  </tbody>
+</table>
+
+<ng-template #noRegion>
+  Aucune Region
+</ng-template>
+
+

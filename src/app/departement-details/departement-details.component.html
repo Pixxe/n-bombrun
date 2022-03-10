@@ -1,0 +1,30 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a routerLink="/">Regions</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Departements</li>
+  </ol>
+</nav>
+
+
+
+<table class="table table-striped ">
+  <thead>
+  <tr>
+    <th>Nom</th>
+    <th>Code</th>
+    <th>Code Region</th>
+  </tr>
+  </thead>
+  <tbody>
+  <ng-container *ngFor="let departement of departementbyRegion" >
+
+    <tr routerLink="/region/{{departement.codeRegion}}/departement">
+      <th>{{departement.nom}}</th>
+      <th>{{departement.code}}</th>
+      <th>{{departement.codeRegion}}</th>
+    </tr>
+
+
+  </ng-container>
+  </tbody>
+</table>
